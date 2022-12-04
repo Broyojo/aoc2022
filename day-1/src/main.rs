@@ -22,7 +22,7 @@ fn part_one() {
         }
     }
 
-    println!("{}", max);
+    println!("{max}");
 }
 
 fn part_one_functional() {
@@ -32,7 +32,7 @@ fn part_one_functional() {
         .map(|s| s.split('\n').map(|l| l.parse::<u64>().unwrap()).sum())
         .max()
         .unwrap();
-    println!("{}", max);
+    println!("{max}");
 }
 
 fn part_two() {
@@ -52,7 +52,7 @@ fn part_two() {
 
     let top: u64 = totals.iter().rev().take(3).sum();
 
-    println!("{}", top);
+    println!("{top}");
 }
 
 fn part_two_functional() {
@@ -63,5 +63,5 @@ fn part_two_functional() {
         .collect();
     totals.sort();
     let top: u64 = totals.iter().rev().take(3).sum();
-    println!("{}", top);
+    println!("{top}");
 }
